@@ -72,3 +72,41 @@ public class Desafio8 {
     }
 }
 ```
+# questao 3
+```java
+package desafio8;
+
+import java.util.Scanner;
+
+/**
+ * 3. Crie um método chamado somarLista(). Este método recebe como parâmetro um
+ * número inteiro que representa a quantidade de vezes que o loop deve ser
+ * executado. O método então soma todos os valores até esse número e mostra o
+ * resultado da soma.
+ *
+ * @author Henrique Michel Rodrigues
+ */
+public class Desafio8 {
+
+    public static void main(String[] args) {
+
+        int n;
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite um número:");
+        n = ler.nextInt();
+        somaLista(n);
+    }
+
+    public static void somaLista(int x) {
+        int i = 0;
+        int soma = 0;
+        while (i < x) {
+            i++;
+            soma += i;
+
+        }
+        System.out.println("A soma da lista de número é:" + soma);
+
+    }
+}
+```
