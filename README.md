@@ -41,3 +41,34 @@ public class Desafio8 {
 
 }
 ```
+# questao 2
+```java
+package desafio8;
+
+import java.util.Scanner;
+
+/**
+ * 2. Crie um método com nome de converteMaiusculaEConta(), este método recebe
+ * por parâmetro uma variável String e torna ela em maiúscula em seguida mostra
+ * na mesma saída a quantidade de caracteres que esta variável possui.
+ *
+ * @author Henrique Michel Rodrigues
+ */
+public class Desafio8 {
+
+    public static void main(String[] args) {
+
+        String palavra;
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite uma palavra:");
+        palavra = ler.nextLine();
+        converteMaiusculaEConta(palavra);
+    }
+
+    public static void converteMaiusculaEConta(String p) {
+        System.out.println(p.toUpperCase());
+        System.out.println(p.length());
+
+    }
+}
+```
