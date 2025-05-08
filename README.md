@@ -110,3 +110,40 @@ public class Desafio8 {
     }
 }
 ```
+# questao 4
+```java
+package desafio8;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+/**
+ * 4. Crie um método com o nome de calcularMedia(), que recebe por parâmetro
+ * três números fracionários e retorna a média deles (double).
+ *
+ * @author Henrique Michel Rodrigues
+ */
+public class Desafio8 {
+
+    public static void main(String[] args) {
+
+        double n1, n2, n3;
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite a primeira nota:");
+        n1 = ler.nextDouble();
+        System.out.println("Digite a segunda nota:");
+        n2 = ler.nextDouble();
+        System.out.println("Digite a terceira nota:");
+        n3 = ler.nextDouble();
+        calcularMedia(n1, n2, n3);
+    }
+
+    public static double calcularMedia(double x, double y, double z) {
+        double media;
+        DecimalFormat df = new DecimalFormat("0.00");
+        media = (x + y + z) / 3;
+        System.out.println("Sua media é:" + df.format(media));
+        return media;
+    }
+}
+```
