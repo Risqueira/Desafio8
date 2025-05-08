@@ -135,15 +135,80 @@ public class Desafio8 {
         n2 = ler.nextDouble();
         System.out.println("Digite a terceira nota:");
         n3 = ler.nextDouble();
-        calcularMedia(n1, n2, n3);
+        System.out.println("Sua media é"+calcularMedia(n1, n2, n3));
     }
 
     public static double calcularMedia(double x, double y, double z) {
         double media;
         DecimalFormat df = new DecimalFormat("0.00");
         media = (x + y + z) / 3;
-        System.out.println("Sua media é:" + df.format(media));
         return media;
     }
 }
+```
+# questao 5
+```java
+package desafio8;
+
+import java.util.Scanner;
+
+/**
+ * 5. Crie um método com o nome de inverterTexto() que recebe por parâmetro uma
+ * String e retorna a String invertida (String).
+ *
+ * @author Henrique Michel Rodrigues
+ */
+public class Desafio8 {
+
+    public static void main(String[] args) {
+
+        String palavra;
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite uma palavra:");
+        palavra = ler.nextLine();
+        System.out.println("Original:" + palavra);
+        System.out.println("Inverso:" + inverterTexto(palavra));
+
+    }
+
+    public static String inverterTexto(String p) {
+        String inverte = " ";
+        for (int i = p.length() - 1; i >= 0; i--) {
+            inverte += p.charAt(i);
+        }
+        return inverte;
+    }
+}
+```
+# questao 6
+```java
+package desafio8;
+
+import java.util.Scanner;
+
+/**
+ * 6. Crie um método com nome de conversorKM(), que recebe por parâmetro um
+ * valor em metros (double) e retorna o valor convertido em quilômetros
+ * (double). A conversão é feita dividindo o valor em metros por 1000.
+ *
+ * @author Henrique Michel Rodrigues
+ */
+public class Desafio8 {
+
+    public static void main(String[] args) {
+
+        double n;
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite um numero:");
+        n = ler.nextDouble();
+        System.out.println("De metros para Km é:" + conversorKM(n) + "Km");
+
+    }
+
+    public static double conversorKM(double x) {
+        double calculo = x / 1000;
+        return calculo;
+    }
+}
+
 ```
