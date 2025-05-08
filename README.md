@@ -212,3 +212,36 @@ public class Desafio8 {
 }
 
 ```
+# questao 7
+```java
+package desafio8;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+/**
+ * 7. Crie um método com o nome de calcularVolume(), este método recebe por
+ * parâmetro o valor do raio. Para calcular o volume de uma esfera utilize a
+ * seguinte Fórmula: (4/3) * PI * raio³. (retorne double)
+ *
+ * @author Henrique Michel Rodrigues
+ */
+public class Desafio8 {
+
+    public static void main(String[] args) {
+
+        double r;
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("0.00");
+        System.out.println("Digite um numero:");
+        r = ler.nextDouble();
+        System.out.println("O volume da esfera é:" + df.format(calcularVolume(r)) + "cm³");
+
+    }
+
+    public static double calcularVolume(double x) {
+        double calculo = (4.0 / 3.0) * Math.PI * (Math.pow(x, 3));
+        return calculo;
+    }
+}
+```
